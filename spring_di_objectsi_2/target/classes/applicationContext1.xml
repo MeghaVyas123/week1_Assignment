@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+">
+<bean id="address1" class="com.example.Address" scope="prototype">  
+<property name="addressLine1" value="Ring Rd,BTM"></property>  
+<property name="city" value="Bangalore"></property>  
+<property name="state" value="KA"></property>  
+<property name="country" value="India"></property>  
+</bean>  
+<bean id="objs" class="com.xyz.Salary">  
+<property name="basic" value="25.6"></property>  
+<property name="hra" value="10.1"></property>  
+</bean>  
+<bean id="oloc" class="com.xyz.Location">  
+<property name="latitude" value="15.6"></property>  
+<property name="longitude" value="13.1"></property>  
+</bean>   
+<bean id="obj" class="com.example.Employee">  
+<property name="id" value="1"></property>  
+<property name="name" value="Kumar"></property>  
+<property name="address" ref="address1"></property> 
+<property name="salary" ref="objs"></property> 
+<property name="location" ref="oloc"></property>
+
+</bean>  
+
+</beans>
